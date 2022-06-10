@@ -11,7 +11,7 @@ https://docs.unrealengine.com/5.0/zh-CN/GameplayFeatures/EnhancedInput/
 
 如果要在 C++ 代码里使用 Enhanced Input，还有一个补充步骤：在 *项目名.build.cs* 文件里添加 "EnhancedInput"
 
-![image-20210722113933024](2022-08-15-Unreal Enhanced Input研究.assets/image-20210722113933024.png)
+![image-20210722113933024](2021-08-15-Unreal Enhanced Input研究.assets/image-20210722113933024.png)
 
 # 复习默认的输入
 
@@ -35,7 +35,7 @@ https://docs.unrealengine.com/5.0/zh-CN/GameplayFeatures/EnhancedInput/
 
    执行回调函数里的游戏逻辑。
 
-   ![image-20210720184354480](2022-08-15-Unreal Enhanced Input研究.assets/image-20210720184354480.png)
+   ![image-20210720184354480](2021-08-15-Unreal Enhanced Input研究.assets/image-20210720184354480.png)
 
 
 
@@ -61,7 +61,7 @@ https://docs.unrealengine.com/5.0/zh-CN/GameplayFeatures/EnhancedInput/
 
 在自己创建的 EnhancedInputAction 资产里，有一个 Consume Input，可以选择是把输入消耗掉还是继续传给更低优先级的 Action
 
-![image-20210803185252237](2022-08-15-Unreal Enhanced Input研究.assets/image-20210803185252237.png)
+![image-20210803185252237](2021-08-15-Unreal Enhanced Input研究.assets/image-20210803185252237.png)
 
 # 输入映射上下文
 
@@ -71,7 +71,7 @@ https://docs.unrealengine.com/5.0/zh-CN/GameplayFeatures/EnhancedInput/
 
 输入修饰符会修改UE5收到的原始输入值，然后再发送给输入触发器。
 
-![image-20210721185004008](2022-08-15-Unreal Enhanced Input研究.assets/image-20210721185004008.png)
+![image-20210721185004008](2021-08-15-Unreal Enhanced Input研究.assets/image-20210721185004008.png)
 
 | 插件提供的修饰符              | 说明                                                         | 备注                                                         |
 | ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -103,7 +103,7 @@ Triggers 可以在 Input Action 里配置，也可以在 Input Mapping Context �
 
 在蓝图中可以用 Get Trigger Type 
 
-![image-20210714111831134](2022-08-15-Unreal Enhanced Input研究.assets/image-20210714111831134.png)
+![image-20210714111831134](2021-08-15-Unreal Enhanced Input研究.assets/image-20210714111831134.png)
 
 | ETriggerType | 值   | 说明                                                         | 备注                                                     |
 | ------------ | ---- | ------------------------------------------------------------ | -------------------------------------------------------- |
@@ -117,7 +117,7 @@ Triggers 可以在 Input Action 里配置，也可以在 Input Mapping Context �
 
 在处理用户输入后，输入触发器会通过`UpdateState`函数返回以下三种触发器状态（Trigger State）（**ETriggerState**）之一
 
-![image-20210714161622744](2022-08-15-Unreal Enhanced Input研究.assets/image-20210714161622744.png)
+![image-20210714161622744](2021-08-15-Unreal Enhanced Input研究.assets/image-20210714161622744.png)
 
 | ETriggerState | 值   | 说明                                                         | 备注                                                         |
 | ------------- | ---- | :----------------------------------------------------------- | ------------------------------------------------------------ |
@@ -133,7 +133,7 @@ Triggers 可以在 Input Action 里配置，也可以在 Input Mapping Context �
 
 如果触发器的父类是`UInputTriggerTimedBase`，那说明这个触发器会**检查某个输入是否被按住一段时间**，并且在按住且未超过 xxTimeThreshold 时会返回 Ongoing 状态。
 
-![image-20210713183544267](2022-08-15-Unreal Enhanced Input研究.assets/image-20210713183544267.png)
+![image-20210713183544267](2021-08-15-Unreal Enhanced Input研究.assets/image-20210713183544267.png)
 
 
 
@@ -154,7 +154,7 @@ Triggers 可以在 Input Action 里配置，也可以在 Input Mapping Context �
 
 
 
-![image-20210713171724619](2022-08-15-Unreal Enhanced Input研究.assets/image-20210713171724619.png)
+![image-20210713171724619](2021-08-15-Unreal Enhanced Input研究.assets/image-20210713171724619.png)
 
 EnhancedInputAction 里上面的 5 个引脚都是 Trigger event (ETriggerEvent)。
 
